@@ -1,0 +1,69 @@
+# Unity 2D Fluid Simulation
+
+This project is a 2D fluid simulation implemented in Unity. It uses particle-based methods to simulate fluid dynamics, including gravity, collision detection, and spatial hashing for efficient neighbor searching.
+
+## Project Structure
+
+- **Assets/personalAssests/ParticleSimulation.cs**: Main script for the particle simulation. It initializes particles, applies fluid dynamics, gravity, and collision detection, and draws the particles.
+- **Assets/personalAssests/Collision.cs**: Handles collision detection and resolution for particles.
+- **Assets/personalAssests/FluidDynamics.cs**: Contains functions to calculate pressure, density, and apply fluid dynamics to particles.
+- **Assets/personalAssests/GravityScript.cs**: Applies gravity to particles.
+- **Assets/personalAssests/ParticleArrayScript.cs**: Initializes particle arrays and defines the `Particle` class.
+- **Assets/personalAssests/SimulationControls.cs**: Handles user input for controlling the simulation, such as pushing and pulling particles and adjusting the radius.
+- **Assets/personalAssests/SpatialHashingScript.cs**: Implements spatial hashing for efficient neighbor searching in the particle simulation.
+
+## Getting Started
+
+### Prerequisites
+
+- Unity 2020.3 or later
+
+### Installation
+
+1. Clone the repository to a local folder:
+2. In Unity Hub "Add" that local folder to your projects
+3. open project and enjoy
+
+
+
+
+
+### Usage
+Attach the ParticleSimulation script to a GameObject in your scene.
+Configure the public variables in the ParticleSimulation script as needed:
+particleCount: Number of particles in the simulation.
+particleRadius: Radius of each particle.
+particleInfluenceRadius: Influence radius for fluid dynamics calculations.
+colorParVelDen: Toggle to color particles based on velocity or density.
+hash: Toggle to use spatial hashing for neighbor searching.
+Attach the other scripts (Collision, FluidDynamics, GravityScript, ParticleArrayScript, SimulationControls, SpatialHashingScript) to appropriate GameObjects or the same GameObject as ParticleSimulation.
+Run the scene to see the fluid simulation in action.
+Controls (WIP)
+Left-click: Push particles at the mouse position. //only displays cordinates in consel
+Right-click: Pull particles to the mouse position. //only displays cordinates in consel
+Mouse Scroll Wheel: Adjust the radius value. //only displays controller radius in consel 
+Scripts Overview
+ParticleSimulation.cs
+Initializes particles and applies fluid dynamics, gravity, and collision detection.
+Draws particles using the Shapes library.
+Collision.cs
+Detects and resolves collisions for particles.
+FluidDynamics.cs
+Calculates pressure and density for particles.
+Applies fluid dynamics to particles.
+GravityScript.cs
+Applies gravity to particles.
+ParticleArrayScript.cs
+Initializes particle arrays.
+Defines the Particle class.
+SimulationControls.cs
+Handles user input for controlling the simulation.
+SpatialHashingScript.cs
+Implements spatial hashing for efficient neighbor searching.
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+
+## Acknowledgements
+Unity
+Shapes library for drawing particle
